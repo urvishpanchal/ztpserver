@@ -80,7 +80,7 @@ Copy and paste the option text into a new template in:
    ! For serial number, non-default VRF:
    action bash export SERIAL=`FastCli -p 15 -c 'show ver' | grep Serial | tr -s ' ' | cut -d ' ' -f 3 | tr -d '\r'`; sudo ip netns exec ns-$vrf_name curl http://$ztpserver:$port/nodes/$SERIAL/startup-config -H "content-type: text/plain" --data-binary @/mnt/flash/startup-config -X PUT
 
-Zero-touch replatement (ZTR)
+Zero-touch Replacement (ZTR)
 ----------------------------
 
 Objective
